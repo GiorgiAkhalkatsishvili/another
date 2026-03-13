@@ -5,7 +5,7 @@ import HeroComponent from './components/HeroComponent';
 import { BrowserRouter as Router, Routes } from "react-router-dom";
 import SubjectsComponent from './components/SubjectsComponent';
 import DailyChallengeComponent from './components/DailyChallengeComponent';
-// import FooterComponent from './components/FooterComponent';
+import FooterComponent from './components/FooterComponent';
 
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
         <HeroComponent />
         <SubjectsComponent />
         <DailyChallengeComponent />
-        {/* <FooterComponent/> */}
+        <FooterComponent/>
         <Routes>
         </Routes>
       </div>
