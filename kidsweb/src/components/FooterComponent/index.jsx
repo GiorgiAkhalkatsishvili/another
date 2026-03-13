@@ -1,8 +1,9 @@
+import React from "react";
 import "./FooterComponent.css";
 
 function FooterComponent() {
   return (
-    <footer className="site-footer">
+    <div className="site-footer">
       <div className="footer-rainbow">
         <div style={{ background: "#f87171" }} />
         <div style={{ background: "#facc15" }} />
@@ -14,13 +15,13 @@ function FooterComponent() {
       <div className="footer-inner">
 
         <div className="footer-brand">
-          <h3 className="footer-logo">
+          <div className="footer-logo">
             <span className="logo-pink">ცოდნის</span>{" "}
             <span className="logo-blue">სამყარო</span>
-          </h3>
-          <p className="footer-tagline">
+          </div>
+          <div className="footer-tagline">
             შევქმნათ უკეთესი მომავალი ჩვენი ბავშვებისთვის, ერთად!
-          </p>
+          </div>
         </div>
 
         <div className="footer-links">
@@ -31,11 +32,11 @@ function FooterComponent() {
 
         <div className="footer-social-col">
           {/* Icons removed */}
-          <p className="footer-copy">© 2026 ცოდნის სამყარო. ყველა უფლება დაცულია.</p>
+          <div className="footer-copy">© 2026 ცოდნის სამყარო. ყველა უფლება დაცულია.</div>
         </div>
 
       </div>
-    </footer>
+    </div>
   );
 }
 
