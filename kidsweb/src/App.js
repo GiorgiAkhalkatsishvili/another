@@ -5,6 +5,7 @@ import HeroComponent from './components/HeroComponent';
 import { BrowserRouter as Router, Routes } from "react-router-dom";
 import SubjectsComponent from './components/SubjectsComponent';
 import DailyChallengeComponent from './components/DailyChallengeComponent';
+import FooterComponent from './components/FooterComponent';
 
 
 function App() {
@@ -14,7 +15,8 @@ function App() {
         <HeaderComponent />
         <HeroComponent />
         <SubjectsComponent />
-        <DailyChallengeComponent/>
+        <DailyChallengeComponent />
+        <FooterComponent/>
         <Routes>
         </Routes>
       </div>
