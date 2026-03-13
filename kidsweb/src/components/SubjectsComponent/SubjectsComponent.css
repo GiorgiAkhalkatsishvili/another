@@ -1,0 +1,151 @@
+.subjects-section {
+  padding: 80px 24px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.subjects-header {
+  text-align: center;
+  margin-bottom: 52px;
+}
+
+.subjects-title {
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 900;
+  color: #1e293b;
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
+}
+
+.subjects-yellow {
+  color: #eab308;
+}
+
+.subjects-subtitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: #64748b;
+}
+
+.subjects-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.subject-card {
+  border-radius: 28px;
+  padding: 12px;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(50px) scale(0.95);
+  transition: opacity 0.55s cubic-bezier(0.34, 1.56, 0.64, 1),
+    transform 0.55s cubic-bezier(0.34, 1.56, 0.64, 1);
+  min-width: 0;
+}
+
+.subject-card-in {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.subject-card:hover {
+  transform: translateY(-10px) scale(1.02) !important;
+}
+
+.subject-inner {
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  padding: 28px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.12), transparent);
+  position: relative;
+  overflow: hidden;
+  min-height: clamp(200px, 25vw, 280px);
+}
+
+.subject-glow {
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  filter: blur(20px);
+  transition: transform 0.5s ease;
+  pointer-events: none;
+}
+
+.subject-card:hover .subject-glow {
+  transform: scale(1.8);
+}
+
+.subject-icon-wrap {
+  background: #fff;
+  padding: 20px;
+  border-radius: 24px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.subject-card:hover .subject-icon-wrap {
+  transform: scale(1.12) rotate(6deg);
+}
+
+.subject-title {
+  font-size: 22px;
+  font-weight: 900;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.subject-spacer {
+  flex: 1;
+  min-height: 16px;
+}
+
+/* Button replacing PlayfulButton */
+
+.subject-button {
+  width: 100%;
+  font-size: 14px;
+  padding: 10px 14px;
+  border-radius: 14px;
+  border: none;
+  background: #ffffff;
+  cursor: pointer;
+  font-weight: 800;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.subject-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.subject-button:active {
+  transform: translateY(0);
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .subjects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .subjects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .subjects-section {
+    padding: 56px 16px;
+  }
+}

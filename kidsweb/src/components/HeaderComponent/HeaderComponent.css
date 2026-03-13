@@ -1,0 +1,291 @@
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 2px solid #f1f5f9;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+.header-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 32px;
+  height: 72px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.logo-link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.logo-icon-wrap {
+  background: #dbeafe;
+  padding: 10px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+  font-size: 20px;
+}
+
+.logo-link:hover .logo-icon-wrap {
+  transform: scale(1.1) rotate(12deg);
+}
+
+.logo-text {
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-pink {
+  color: #ec4899;
+}
+
+.logo-blue {
+  color: #3b82f6;
+}
+
+.desktop-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+  flex: 1;
+  justify-content: center;
+}
+
+/* FIX for using buttons instead of links */
+
+.nav-link {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 15px;
+  color: #475569;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.2s, background 0.2s;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.nav-georgian:hover {
+  color: #ef4444;
+  background: #fef2f2;
+}
+
+.nav-math:hover {
+  color: #22c55e;
+  background: #f0fdf4;
+}
+
+.nav-science:hover {
+  color: #a855f7;
+  background: #faf5ff;
+}
+
+.nav-art:hover {
+  color: #ec4899;
+  background: #fdf2f8;
+}
+
+.nav-games:hover {
+  color: #ca8a04;
+  background: #fefce8;
+}
+
+.header-actions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+/* PLAYFUL BUTTON (used in your JSX) */
+
+.playful-button {
+  border: none;
+  border-radius: 12px;
+  padding: 8px 16px;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.2s;
+}
+
+.playful-button:hover {
+  transform: translateY(-2px);
+}
+
+.playful-button.white {
+  background: white;
+  border: 2px solid #e2e8f0;
+  color: #475569;
+}
+
+.playful-button.white:hover {
+  background: #f8fafc;
+}
+
+.playful-button.yellow {
+  background: #facc15;
+  color: #1e293b;
+}
+
+.playful-button.yellow:hover {
+  background: #eab308;
+}
+
+.playful-button.sm {
+  font-size: 14px;
+}
+
+/* MOBILE MENU BUTTON */
+
+.mobile-menu-btn {
+  display: none;
+  padding: 8px;
+  background: #f1f5f9;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  color: #475569;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-menu-btn:hover {
+  background: #e2e8f0;
+}
+
+/* MOBILE NAVIGATION */
+
+.mobile-nav {
+  background: #fff;
+  border-top: 2px solid #f1f5f9;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+
+  opacity: 0;
+  transform: translateY(-10px) scaleY(0.95);
+  transform-origin: top;
+  pointer-events: none;
+}
+
+.mobile-nav.open {
+  animation: mobileMenuOpen 0.28s ease forwards;
+  pointer-events: auto;
+}
+
+.mobile-nav.close {
+  animation: mobileMenuClose 0.22s ease forwards;
+}
+
+@keyframes mobileMenuOpen {
+  from {
+    opacity: 0;
+    transform: translateY(-10px) scaleY(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scaleY(1);
+  }
+}
+
+@keyframes mobileMenuClose {
+  from {
+    opacity: 1;
+    transform: translateY(0) scaleY(1);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(-10px) scaleY(0.95);
+  }
+}
+
+/* FIX for button mobile links */
+
+.mobile-nav-link {
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 15px;
+  color: #475569;
+  background: #f8fafc;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+.mobile-nav-link:hover {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.mobile-parents {
+  color: #7c3aed;
+  background: #f5f3ff;
+}
+
+.mobile-divider {
+  height: 1px;
+  background: #e2e8f0;
+  margin: 4px 0;
+}
+
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .parents-btn {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-text {
+    display: none;
+  }
+
+  .header-inner {
+    padding: 0 16px;
+  }
+}
