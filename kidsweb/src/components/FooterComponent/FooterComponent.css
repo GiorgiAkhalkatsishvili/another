@@ -1,4 +1,4 @@
-/* .site-footer {
+.FooterComponent {
   background: #fff;
   margin-top: 96px;
   overflow: hidden;
@@ -67,6 +67,8 @@
   padding: 10px 16px;
   border-radius: 12px;
   text-decoration: none;
+  cursor: default;
+  /* Paragraphs are not clickable */
   transition: color 0.2s, background 0.2s, transform 0.2s;
 }
 
@@ -117,7 +119,7 @@
     padding: 32px 16px;
   }
 
-  .site-footer {
+  .FooterComponent {
     margin-top: 48px;
   }
-} */
+}
