@@ -1,4 +1,3 @@
-import { Facebook, Instagram, Youtube } from "lucide-react";
 import "./FooterComponent.css";
 
 function FooterComponent() {
@@ -31,18 +30,8 @@ function FooterComponent() {
         </div>
 
         <div className="footer-social-col">
-          <div className="social-icons">
-            <a href="#" className="social-btn social-facebook" aria-label="Facebook">
-              <Facebook size={22} />
-            </a>
-            <a href="#" className="social-btn social-instagram" aria-label="Instagram">
-              <Instagram size={22} />
-            </a>
-            <a href="#" className="social-btn social-youtube" aria-label="YouTube">
-              <Youtube size={22} />
-            </a>
-          </div>
-          <p className="footer-copy">© 2024 ცოდნის სამყარო. ყველა უფლება დაცულია.</p>
+          {/* Icons removed */}
+          <p className="footer-copy">© 2026 ცოდნის სამყარო. ყველა უფლება დაცულია.</p>
         </div>
 
       </div>
