@@ -1,26 +1,19 @@
 import './App.css';
-
-import HeaderComponent from './components/HeaderComponent';
-import HeroComponent from './components/HeroComponent';
-import { BrowserRouter as Router, Routes } from "react-router-dom";
-import SubjectsComponent from './components/SubjectsComponent';
-import DailyChallengeComponent from './components/DailyChallengeComponent';
-// import FooterComponent from './components/FooterComponent';
-
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import HomePage from './pages/HomePage';
+// import PuzzleGame from './pages/PuzzleGamePage';
+import AuthPage from './pages/AuthPage';
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <HeaderComponent />
-        <HeroComponent />
-        <SubjectsComponent />
-        <DailyChallengeComponent />
-        {/* <FooterComponent/> */}
-        <Routes>
-        </Routes>
-      </div>
-    </Router>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        {/* <Route path="/puzzle" element={<PuzzleGame />} />
+        <Route path="/auth" element={<AuthPage />} /> */}
+        <Route path="/auth" element={<AuthPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
