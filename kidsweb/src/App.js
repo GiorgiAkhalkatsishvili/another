@@ -1,8 +1,11 @@
 import './App.css';
+
 import HeaderComponent from './components/HeaderComponent';
 import HeroComponent from './components/HeroComponent';
 import { BrowserRouter as Router, Routes } from "react-router-dom";
 import SubjectsComponent from './components/SubjectsComponent';
+import DailyChallengeComponent from './components/DailyChallengeComponent';
+
 
 function App() {
   return (
@@ -10,7 +13,8 @@ function App() {
       <div className="App">
         <HeaderComponent />
         <HeroComponent />
-        <SubjectsComponent/>
+        <SubjectsComponent />
+        <DailyChallengeComponent/>
         <Routes>
         </Routes>
       </div>

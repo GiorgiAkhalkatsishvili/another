@@ -1,0 +1,384 @@
+.challenge-section {
+  padding: 80px 24px;
+  background: #f8fafc;
+  border-top: 2px solid #e2e8f0;
+  border-bottom: 2px solid #e2e8f0;
+  overflow: hidden;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.challenge-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.challenge-heading {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.challenge-icon-wrap {
+  background: #f97316;
+  padding: 12px;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(249, 115, 22, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.challenge-title {
+  font-size: clamp(22px, 4vw, 40px);
+  font-weight: 900;
+  color: #1e293b;
+}
+
+.challenge-orange {
+  color: #f97316;
+}
+
+.challenge-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  width: 100%;
+}
+
+/* Shared card animation */
+.card {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+  min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.card:nth-child(2) {
+  transform: translateY(24px);
+}
+
+.card-in {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* ── Puzzle card ── */
+
+.puzzle-card {
+  background: #fff;
+  border-radius: 28px;
+  border: 3px solid #dbeafe;
+  padding: 36px 32px;
+  box-shadow: 0 16px 48px rgba(59, 130, 246, 0.08);
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.puzzle-bg-icon {
+  position: absolute;
+  right: -32px;
+  bottom: -32px;
+  opacity: 0.04;
+  pointer-events: none;
+  color: #000;
+}
+
+.puzzle-content {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  align-items: flex-start;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.puzzle-icon-wrap {
+  background: #dbeafe;
+  padding: 16px;
+  border-radius: 24px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.puzzle-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  min-width: 0;
+  width: 100%;
+}
+
+.puzzle-title {
+  font-size: 24px;
+  font-weight: 900;
+  color: #1e293b;
+  margin-bottom: 8px;
+}
+
+.puzzle-subtitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: #64748b;
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+.letter-tiles-wrap {
+  background: #f8fafc;
+  padding: 16px;
+  border-radius: 16px;
+  border: 2px dashed #cbd5e1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 28px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.letter-tile {
+  width: 44px;
+  height: 52px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: 900;
+  flex-shrink: 0;
+}
+
+.tile-known {
+  background: #fff;
+  border: 2px solid #e2e8f0;
+  color: #334155;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.tile-mystery {
+  background: #eff6ff;
+  border: 2px solid #93c5fd;
+  color: #3b82f6;
+}
+
+/* Puzzle button (replacement for PlayfulButton) */
+
+.challenge-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: #2563eb;
+  color: #fff;
+  font-weight: 800;
+  font-size: 14px;
+  padding: 10px 18px;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.2s ease;
+}
+
+.challenge-button:hover {
+  transform: translateY(-2px);
+  background: #1d4ed8;
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.35);
+}
+
+.challenge-button:active {
+  transform: translateY(0);
+}
+
+/* ── Leaderboard card ── */
+
+.lb-card {
+  background: linear-gradient(135deg, #facc15, #f97316);
+  border-radius: 28px;
+  padding: 8px;
+  box-shadow: 0 16px 48px rgba(249, 115, 22, 0.25);
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.lb-card-inner {
+  background: #fff;
+  border-radius: 22px;
+  padding: 32px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-sizing: border-box;
+}
+
+.lb-card-title {
+  font-size: 24px;
+  font-weight: 900;
+  color: #1e293b;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+.lb-star-icon {
+  background: #fef9c3;
+  padding: 8px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.lb-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.lb-entry {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border-radius: 16px;
+  border: 2px solid transparent;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: lbFadeIn 0.4s ease forwards;
+  transition: transform 0.2s ease;
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+}
+
+.lb-entry:hover {
+  transform: scale(1.02);
+}
+
+@keyframes lbFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.lb-rank {
+  font-weight: 900;
+  font-size: 14px;
+  min-width: 28px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.lb-rank-big {
+  font-size: 18px;
+}
+
+.lb-avatar {
+  width: 36px;
+  height: 36px;
+  background: #dbeafe;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.lb-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.lb-name {
+  flex: 1;
+  font-weight: 700;
+  color: #334155;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+}
+
+.lb-score {
+  font-weight: 900;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 4px 10px;
+  border-radius: 10px;
+  color: #1e293b;
+  flex-shrink: 0;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .challenge-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .puzzle-content {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .challenge-section {
+    padding: 40px 16px;
+  }
+
+  .puzzle-card {
+    padding: 20px 16px;
+  }
+
+  .lb-card-inner {
+    padding: 20px 16px;
+  }
+
+  .puzzle-title {
+    font-size: 18px;
+  }
+
+  .puzzle-subtitle {
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+
+  .lb-card-title {
+    font-size: 18px;
+  }
+
+  .letter-tile {
+    width: 38px;
+    height: 46px;
+    font-size: 18px;
+  }
+
+  .letter-tiles-wrap {
+    padding: 12px;
+    margin-bottom: 20px;
+  }
+}
