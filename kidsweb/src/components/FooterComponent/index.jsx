@@ -1,9 +1,9 @@
-import { Facebook, Instagram, Youtube } from "lucide-react";
 import "./FooterComponent.css";
 
 function FooterComponent() {
   return (
     <footer className="site-footer">
+      {/* Rainbow strip */}
       <div className="footer-rainbow">
         <div style={{ background: "#f87171" }} />
         <div style={{ background: "#facc15" }} />
@@ -13,7 +13,7 @@ function FooterComponent() {
       </div>
 
       <div className="footer-inner">
-
+        {/* Brand */}
         <div className="footer-brand">
           <h3 className="footer-logo">
             <span className="logo-pink">ცოდნის</span>{" "}
@@ -24,27 +24,17 @@ function FooterComponent() {
           </p>
         </div>
 
+        {/* Links */}
         <div className="footer-links">
           <a href="#" className="footer-link">ხშირად დასმული კითხვები</a>
           <a href="#" className="footer-link">კონტაქტი</a>
           <a href="#" className="footer-link">წესები და პირობები</a>
         </div>
 
+        {/* Footer copy */}
         <div className="footer-social-col">
-          <div className="social-icons">
-            <a href="#" className="social-btn social-facebook" aria-label="Facebook">
-              <Facebook size={22} />
-            </a>
-            <a href="#" className="social-btn social-instagram" aria-label="Instagram">
-              <Instagram size={22} />
-            </a>
-            <a href="#" className="social-btn social-youtube" aria-label="YouTube">
-              <Youtube size={22} />
-            </a>
-          </div>
           <p className="footer-copy">© 2024 ცოდნის სამყარო. ყველა უფლება დაცულია.</p>
         </div>
-
       </div>
     </footer>
   );
